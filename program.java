@@ -19,5 +19,7 @@ public class program {
         return (num*(num + 1)) / 2;
     }
 
-    
+    public static void print(int t){
+        System.out.println(t);
+    }
 }
