@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class program {
     public static void main(String[] args) {
         int n = input();
-        //int t = calculate(n);
-        //print(t);
+        int t = calculate(n);
+        print(t);
         
     }
     public static int input(){
