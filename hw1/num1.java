@@ -14,8 +14,12 @@ public class num1 {
         scanner.close();
         return line;
     }
-    
+
     public static int calculate(int num){
         return (num*(num + 1)) / 2;
+    }
+
+    public static void print(int t){
+        System.out.println(t);
     }
 }
