@@ -4,7 +4,9 @@ import java.util.Scanner;
 
 public class num1 {
     public static void main(String[] args) {
-        
+        int n = input();
+        int t = calculate(n);
+        print(t);
     }
 
     public static int input(){
