@@ -37,8 +37,18 @@ public class num1 {
         double b = Double.parseDouble(numbers[0]);
         double a = Double.parseDouble(numbers[1]);
         double result = Math.pow(a, b);
-        
+
         return result;
+    }
+
+    static void writeFile(int res) throws IOException{
+        FileWriter writer = new FileWriter("hw2/output.txt", false);
+        StringBuilder sb = new StringBuilder();
+        sb.append(res);
+        String out = sb.toString();
+        writer.write(out);
+        writer.flush();
+        writer.close();
     }
 
 }
