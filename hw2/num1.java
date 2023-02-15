@@ -2,6 +2,7 @@ package hw2;
 
 import java.io.*;
 import java.util.*;
+import java.lang.Math;
 
 public class num1 {
     public static void main(String[] args) throws FileNotFoundException {
@@ -31,10 +32,13 @@ public class num1 {
         return finalArray;
     }
 
-    static int exponentiation(ArrayList<Integer> array){
+    static double exponentiation(ArrayList<Integer> array){
+        String numbers[] = array.toArray(new String[array.size()]);
+        double b = Double.parseDouble(numbers[0]);
+        double a = Double.parseDouble(numbers[1]);
+        double result = Math.pow(a, b);
         
-        
-        return 0;
+        return result;
     }
 
 }
