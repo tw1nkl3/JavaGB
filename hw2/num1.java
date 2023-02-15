@@ -5,11 +5,13 @@ import java.util.*;
 import java.lang.Math;
 
 public class num1 {
-    public static void main(String[] args) throws FileNotFoundException {
-        readFile();
+    public static void main(String[] args) throws IOException {
+        String[] readedArr = readFile();
+        double res = exponentiation(readedArr);
+        writeFile(res);
     }
 
-    static ArrayList<Integer> readFile() throws FileNotFoundException{
+    static String[] readFile() throws FileNotFoundException{
         File txt = new File("hw2/input.txt");
         Scanner scan = new Scanner(txt);
         ArrayList<String> data = new ArrayList<String>();
@@ -19,31 +21,27 @@ public class num1 {
         String[] arr = null;
         String b_ = data.get(0);
         arr = b_.split(" ");
-        int b = Integer.parseInt(arr[1]);
+        String b = arr[1];
 
         String a_ = data.get(1);
         arr = a_.split(" ");
-        int a = Integer.parseInt(arr[1]);
+        String a = arr[1];
 
-        ArrayList<Integer> finalArray = new ArrayList<Integer>();
-        finalArray.add(a);
-        finalArray.add(b);
-
+        String[] finalArray = new String[]{a, b};
         scan.close();
 
         return finalArray;
     }
 
-    static double exponentiation(ArrayList<Integer> array){
-        String numbers[] = array.toArray(new String[array.size()]);
-        double b = Double.parseDouble(numbers[0]);
-        double a = Double.parseDouble(numbers[1]);
+    static double exponentiation(String[] readedArr){
+        double a = Double.parseDouble(readedArr[1]);
+        double b = Double.parseDouble(readedArr[0]);
         double result = Math.pow(a, b);
 
         return result;
     }
 
-    static void writeFile(int res) throws IOException{
+    static void writeFile(double res) throws IOException{
         FileWriter writer = new FileWriter("hw2/output.txt", false);
         StringBuilder sb = new StringBuilder();
         sb.append(res);
