@@ -12,14 +12,26 @@ public class num1 {
         }
     }
 
-    static void readFile() throws FileNotFoundException{
+    static ArrayList<Integer> readFile() throws FileNotFoundException{
         File txt = new File("hw2/input.txt");
         Scanner scan = new Scanner(txt);
-        ArrayList<String> data = new ArrayList<String>() ;
+        ArrayList<String> data = new ArrayList<String>();
         while(scan.hasNextLine()){
             data.add(scan.nextLine());
         }
-        System.out.println(data);
-        String[] simpleArray = data.toArray(new String[]{});
+        String[] arr = null;
+        String b_ = data.get(0);
+        arr = b_.split(" ");
+        int b = Integer.parseInt(arr[1]);
+
+        String a_ = data.get(1);
+        arr = a_.split(" ");
+        int a = Integer.parseInt(arr[1]);
+
+        ArrayList<Integer> finalArray = new ArrayList<Integer>();
+        finalArray.add(a);
+        finalArray.add(b);
+        
+        return finalArray;
     }
 }
