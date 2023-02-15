@@ -4,12 +4,8 @@ import java.io.*;
 import java.util.*;
 
 public class num1 {
-    public static void main(String[] args) {
-        try {
-            readFile();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
+    public static void main(String[] args) throws FileNotFoundException {
+        readFile();
     }
 
     static ArrayList<Integer> readFile() throws FileNotFoundException{
@@ -31,7 +27,14 @@ public class num1 {
         ArrayList<Integer> finalArray = new ArrayList<Integer>();
         finalArray.add(a);
         finalArray.add(b);
-        
+
         return finalArray;
     }
+
+    static int exponentiation(ArrayList<Integer> array){
+        
+        
+        return 0;
+    }
+
 }
