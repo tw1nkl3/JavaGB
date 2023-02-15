@@ -29,6 +29,8 @@ public class num1 {
         finalArray.add(a);
         finalArray.add(b);
 
+        scan.close();
+
         return finalArray;
     }
 
