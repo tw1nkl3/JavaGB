@@ -34,8 +34,8 @@ public class num1 {
     }
 
     static double exponentiation(String[] readedArr){
-        double a = Double.parseDouble(readedArr[1]);
-        double b = Double.parseDouble(readedArr[0]);
+        double b = Double.parseDouble(readedArr[1]);
+        double a = Double.parseDouble(readedArr[0]);
         double result = Math.pow(a, b);
 
         return result;
