@@ -5,14 +5,9 @@ class program {
     public static void main(String args[])
 	{
 		int arr[] = { 12, 11, 13, 5, 6, 7 };
-
-		System.out.println("Given Array");
 		printArray(arr);
-
 		program ob = new program();
 		ob.sort(arr, 0, arr.length - 1);
-
-		System.out.println("\nSorted array");
 		printArray(arr);
 	}
 
